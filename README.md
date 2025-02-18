@@ -1,4 +1,4 @@
-# 🚀  My Journey to SQL Mastery with Intellipath-SQL
+# 🚀  My Journey to SQL Mastery with Intellipaat-SQL
 
 Welcome to **Intellipath-SQL**, a reflection of my SQL learning journey with **Intellipath**. This repository contains projects, assignments, case studies, and solutions that showcase my understanding of SQL, tackling both basic and complex relational database tasks.
 
