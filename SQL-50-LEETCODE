@@ -1,0 +1,89 @@
+SQL Solutions - LeetCode SQL 50 Study Plan
+This repository contains my solutions for SQL problems from LeetCode's SQL 50 Study Plan. Each problem's solution is designed to be efficient and easy to understand.
+
+Solutions List
+Problem Number	Problem Name	Solution
+1757	Recyclable and Low Fat Products	Solution
+584	Find Customer Referee	Solution
+595	Big Countries	Solution
+1148	Article Views I	Solution
+1683	Invalid Tweets	Solution
+1378	Replace Employee ID With The Unique Identifier	Solution
+1068	Product Sales Analysis I	Solution
+1581	Customer Who Visited but Did Not Make Any Transactions	Solution
+197	Rising Temperature	Solution
+1661	Average Time of Process per Machine	Solution
+577	Employee Bonus	Solution
+1280	Students and Examinations	Solution
+570	Managers with at Least 5 Direct Reports	Solution
+1934	Confirmation Rate	Solution
+620	Not Boring Movies	Solution
+1251	Average Selling Price	Solution
+1075	Project Employees I	Solution
+1633	Percentage of Users Attended a Contest	Solution
+1211	Queries Quality and Percentage	Solution
+1193	Monthly Transactions I	Solution
+1174	Immediate Food Delivery II	Solution
+550	Game Play Analysis IV	Solution
+2356	Number of Unique Subjects Taught by Each Teacher	Solution
+1141	User Activity for the Past 30 Days I	Solution
+1070	Product Sales Analysis III	Solution
+596	Classes More Than 5 Students	Solution
+1729	Find Followers Count	Solution
+619	Biggest Single Number	Solution
+1045	Customers Who Bought All Products	Solution
+1731	The Number of Employees Which Report to Each Employee	Solution
+1789	Primary Department for Each Employee	Solution
+610	Triangle Judgement	Solution
+180	Consecutive Numbers	Solution
+1164	Product Price at a Given Date	Solution
+1978	Employees Whose Manager Left the Company	Solution
+185	Department Top Three Salaries	Solution
+Problem Solutions
+1757 - Recyclable and Low Fat Products
+sql
+Copy
+Edit
+SELECT product_id
+FROM Products
+WHERE low_fats = 'Y'
+AND recyclable = 'Y';
+584 - Find Customer Referee
+sql
+Copy
+Edit
+SELECT name 
+FROM Customer 
+WHERE referee_id != 2 OR referee_id IS NULL;
+595 - Big Countries
+sql
+Copy
+Edit
+SELECT name, population, area
+FROM WORLD
+WHERE area >= 3000000
+OR population >= 25000000;
+1148 - Article Views I
+sql
+Copy
+Edit
+SELECT DISTINCT author_id as id
+FROM Views
+WHERE viewer_id >= 1
+AND author_id = viewer_id
+ORDER BY author_id;
+1683 - Invalid Tweets
+sql
+Copy
+Edit
+SELECT tweet_id
+FROM Tweets
+WHERE length(content) > 15;
+1378 - Replace Employee ID With The Unique Identifier
+sql
+Copy
+Edit
+SELECT unique_id, name
+FROM Employees e
+LEFT JOIN EmployeeUNI eu
+ON e.id = eu.id;
